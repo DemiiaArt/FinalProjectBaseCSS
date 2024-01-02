@@ -87,6 +87,11 @@ a {
     }
 }
 
+#notAvailable a {
+    // color: rgba($color: white, $alpha: .2);
+    opacity: .3
+}
+
 
 // @mixin h($fw: 700, $fs: 30px, $lh: normal, color: $main)
 h1,
