@@ -1,0 +1,88 @@
+.c-tag {
+    color: $active;
+    position: relative;
+    padding-right: 10px;
+
+    &:before,
+    &::after {
+        content: "";
+        width: 7px;
+        height: 2px;
+        background: $active;
+        position: absolute;
+        top: 55%;
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &:before {
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        top: 35%;
+        transform: rotate(45deg);
+    }
+
+    &:hover {
+        color: $accent;
+
+        &:before,
+        &::after {
+            background: $accent;
+        }
+    }
+
+    &:active {
+        color: $active-active;
+
+        &:before,
+        &::after {
+            background: $active-active;
+        }
+    }
+}
+
+.c-paginator {
+    padding-top: 30px;
+    text-align: center;
+
+    ul {
+        display: inline-flex;
+        margin-right: -15px;
+
+        li {
+            padding-right: 15px;
+        }
+    }
+
+    span {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: $active;
+        opacity: .2;
+        color: transparent;
+    }
+
+    .current-part {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .c-paginator {
+        ul {
+            li {
+                &:nth-child(3)~li {
+                    display: none;
+                }
+            }
+        }
+
+        span:hover {
+            opacity: .6;
+        }
+    }
+}

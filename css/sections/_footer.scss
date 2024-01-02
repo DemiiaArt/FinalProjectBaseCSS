@@ -1,0 +1,136 @@
+#footer {
+    background: $bg;
+    padding: 0 0 30px 0;
+
+    a {
+        font-weight: 700;
+    }
+
+    .footer-box {
+        &--separator {
+            border-top: 2px solid $separator;
+        }
+    }
+}
+
+.footer-hold {
+    padding: 30px 0;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        address {
+            font-style: normal;
+            color: $main;
+        }
+
+        &--map a {
+            @include upper;
+            font-size: 12px;
+        }
+
+        &--contacts {
+            padding-top: 21px;
+
+            a {
+                display: block;
+
+                &:active {
+                    color: $active-active;
+                }
+            }
+
+            span {
+                font-size: 38px;
+                color: $active;
+
+                &:active {
+                    color: $active-active;
+                }
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+
+            [href*="tel"] {
+                color: $main-alt;
+            }
+        }
+    }
+}
+
+.footer-copy {
+    color: $text;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-hold {
+        display: block;
+        margin: 0 auto;
+
+        >li {
+            position: relative;
+        }
+
+        >li~li:before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            background: $text;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -3px;
+            margin-left: -3px;
+        }
+
+        &__row {
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 3px;
+
+            >li {
+                padding: 0 13px;
+                position: relative;
+            }
+
+            &--contacts {
+                align-items: center;
+            }
+
+            >li~li:before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background: $text;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -3px;
+                margin-left: -3px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #footer {
+        .footer-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .footer-hold {
+            display: block;
+            margin: 0;
+        }
+    }
+}

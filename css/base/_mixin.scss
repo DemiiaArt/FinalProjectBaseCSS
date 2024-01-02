@@ -1,0 +1,23 @@
+
+@mixin h($fw: 700, $fs: 30px, $lh: normal) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $main;
+}
+
+@mixin upper ($tt: uppercase, $lsp: 1px) {
+    text-transform: $tt;
+    letter-spacing: $lsp;
+}
+
+%list-marker {
+    padding-left: 14px;
+    background-image: url(../media/img/list_marker.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+%anim {
+    transition: all .8s ease-in-out;
+}

@@ -1,0 +1,19 @@
+@import "./vendors/normalize";
+// Base style
+@import "./base/variable";
+@import "./base/mixin";
+@import "./base/base";
+@import "./base/icomon";
+
+// sections
+@import "./sections/header";
+@import "./sections/main";
+@import "./sections/footer";
+
+// Style Start
+@import "./components/navigation";
+@import "./components/card";
+@import "./components/button";
+@import "./components/other";
+@import "./components/form";
+@import "./components/swiper";
